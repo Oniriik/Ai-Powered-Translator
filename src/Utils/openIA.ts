@@ -5,7 +5,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
   
-export const AItranslate= async ( inputLanguage:string,text:string,language: string , level:string) =>{
+export const AItranslate= async ( inputLanguage:string,text:string,language: string) =>{
 
     const result = await openai.createCompletion({
         model: 'text-curie-001',
@@ -15,12 +15,7 @@ export const AItranslate= async ( inputLanguage:string,text:string,language: str
                 : '' 
             : ''
         }
-    "${text}" to ${language} 
-    ${level || level == 'common' 
-        ? 
-        `in a ${level} way` 
-        :
-        ''}`,
+    "${text}" to ${language}`,
         temperature: 0.3,
         max_tokens: 100,
         top_p: 1.0,

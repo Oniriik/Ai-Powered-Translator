@@ -28,7 +28,10 @@ export const SelectorContainer= styled.div`
     display: flex;
     flex-direction: row;
     gap: 2.5em;
-
+    width: 100%;
+    @media (max-width: 800px) {
+        gap: 0.5em;
+    }   
 `;
 
 export const FieldContainer = styled.div`
@@ -39,7 +42,19 @@ export const FieldContainer = styled.div`
 
     .translateBtn{
        cursor: ${(props) => props.filled ? 'pointer':'default'};
-    }
+       svg{
+        transform: rotate(90deg);
+       }
+    }   
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+
+        .translateBtn{
+            transform: rotateX('45deg');
+        }
+    }   
 `;
 
 export const Side= styled.div`

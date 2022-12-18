@@ -14,7 +14,6 @@ export const Home: React.FC= () => {
     const [inputLanguage, setInputLanguage] = useState();
     const [result, setResult] = useState('');
     const [resultLanguage, setResultLanguage] = useState();
-    const [level, setLevel] = useState();
     const [isLoading, setLoading] = useState(false);
 
     const [api, contextHolder] = notification.useNotification();
@@ -39,7 +38,7 @@ export const Home: React.FC= () => {
     
     const translate = async() => {
         setLoading(true);
-        const result = await AItranslate(inputLanguage,inputText.trim(),resultLanguage,level);
+        const result = await AItranslate(inputLanguage,inputText.trim(),resultLanguage);
         setResult(result);
         setLoading(false);
     };
@@ -57,7 +56,7 @@ export const Home: React.FC= () => {
                 <Styled.Side>
                     <Select
                         showSearch
-                        placeholder="Select a language (default auto detect)"
+                        placeholder="language input (default detect)"
                         optionFilterProp="children"
                         onChange={setInputLanguage}
                         filterOption={(input, option) =>
@@ -70,7 +69,7 @@ export const Home: React.FC= () => {
                 <Styled.Side>
                     <Select
                         showSearch
-                        placeholder="Select a language"
+                        placeholder="Translate to ..."
                         optionFilterProp="children"
                         onChange={setResultLanguage}
                         filterOption={(input, option) =>
