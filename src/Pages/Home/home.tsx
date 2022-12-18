@@ -39,7 +39,7 @@ export const Home: React.FC= () => {
     
     const translate = async() => {
         setLoading(true);
-        const result = await AItranslate(inputLanguage,inputText,resultLanguage,level);
+        const result = await AItranslate(inputLanguage,inputText.trim(),resultLanguage,level);
         setResult(result);
         setLoading(false);
     };

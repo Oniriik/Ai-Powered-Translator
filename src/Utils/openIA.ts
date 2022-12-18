@@ -1,23 +1,12 @@
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: process.env.REACT_APP_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
   
 export const AItranslate= async ( inputLanguage:string,text:string,language: string , level:string) =>{
-    console.log(`${inputLanguage == 'auto' ?
-        inputLanguage ? 
-            `from ${inputLanguage} ` 
-            : '' 
-        : ''
-    }
-traduce "${text}" to ${language} 
-${level || level == 'common' 
-        ? 
-        `in a ${level} way` 
-        :
-        ''}`);
+
     const result = await openai.createCompletion({
         model: 'text-curie-001',
         prompt: `${inputLanguage == 'auto' ?
@@ -26,7 +15,7 @@ ${level || level == 'common'
                 : '' 
             : ''
         }
-    traduce "${text}" to ${language} 
+    "${text}" to ${language} 
     ${level || level == 'common' 
         ? 
         `in a ${level} way` 

@@ -5,10 +5,6 @@ export const GlobalStyles = createGlobalStyle`
     html,
     #root {
         height: 100%;
-        background-image: url('./Assets/green-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-
     }
 
     * {
