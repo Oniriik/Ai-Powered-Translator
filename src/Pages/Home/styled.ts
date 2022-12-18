@@ -42,9 +42,6 @@ export const FieldContainer = styled.div`
 
     .translateBtn{
        cursor: ${(props) => props.filled ? 'pointer':'default'};
-       svg{
-        transform: rotate(90deg);
-       }
     }   
 
     @media (max-width: 800px) {
@@ -52,7 +49,9 @@ export const FieldContainer = styled.div`
         align-items: center;
 
         .translateBtn{
-            transform: rotateX('45deg');
+            svg{
+                transform: rotate(90deg);
+            }
         }
     }   
 `;
