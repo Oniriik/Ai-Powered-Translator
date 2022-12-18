@@ -44,7 +44,7 @@ export const Home: React.FC= () => {
     };
     return (
         <Styled.Container 
-            style={{ backgroundImage: `url(${require('./Assets/green-bg2.png')})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover' }}>
+            style={{ backgroundImage: `url(${require('./Assets/green.png')})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover' }}>
             {contextHolder}
             <Styled.Hero>
                 <span>
