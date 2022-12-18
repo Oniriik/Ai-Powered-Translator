@@ -1,0 +1,151 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": ["tsconfig.json"],
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-explicit-any": 0,
+        "@typescript-eslint/no-inferrable-types": [
+            2,
+            {
+                "ignoreParameters": true
+            }
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+            "error",
+            {
+                "multiline": {
+                    "delimiter": "semi"
+                }
+            }
+        ],
+        "import/newline-after-import": ["error", { "count": 1 }],
+        "@typescript-eslint/semi": ["error"],
+        "quotes": ["error", "single"],
+        "object-curly-spacing": ["error", "always"],
+        "no-multiple-empty-lines": [
+            2,
+            {
+                "max": 1
+            }
+        ],
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "never"
+        }],
+        "no-case-declarations": 0,
+        "no-async-promise-executor": 0,
+        "import/prefer-default-export": 0,
+        "react/jsx-props-no-spreading": 0,
+        "consistent-return": 0,
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "react/display-name": 0,
+        "react/jsx-indent-props": [2, 4],
+        "import/no-dynamic-require": 0,
+        "import/no-named-as-default": 0,
+        "import/no-extraneous-dependencies": 0,
+        "implicit-arrow-linebreak": 0,
+        "no-underscore-dangle": 0,
+        "class-methods-use-this": 0,
+        "no-prototype-builtins": 0,
+        "react/prefer-stateless-function": 0,
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "react/forbid-prop-types": [
+            2,
+            {
+                "forbid": [
+                    "any"
+                ]
+            }
+        ],
+        "react/jsx-indent": 0,
+        "react/jsx-boolean-value": 0,
+        "max-len": [
+            "error",
+            {
+                "code": 140
+            }
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "warn",
+                    "error",
+                    "log"
+                ]
+            }
+        ],
+        "prefer-destructuring": [
+            "error",
+            {
+                "object": false,
+                "array": false
+            }
+        ],
+        "no-restricted-syntax": [
+            "error",
+            "ForInStatement"
+        ],
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "spaced-comment": 0,
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "multiline": true,
+                "minProperties": 8,
+                "consistent": true
+            }
+        ],
+        "function-paren-newline": [
+            "error",
+            "consistent"
+        ],
+        "jsx-a11y/label-has-associated-control": 0,
+        "jsx-a11y/label-has-for": 0,
+        "react/button-has-type": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "react/destructuring-assignment": 0,
+        "operator-linebreak": 0,
+        "no-trailing-spaces": 0,
+        "no-unused-expressions": 0,
+        "curly": [
+            "error",
+            "all"
+        ]
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/eslint-plugin-tslint",
+        "eslint-plugin-import"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ]
+}
